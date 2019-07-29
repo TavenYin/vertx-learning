@@ -1,5 +1,6 @@
 package com.github.taven.data_access.jdbc;
 
+import com.github.taven.data_access.Sql;
 import io.vertx.core.Vertx;
 import io.vertx.core.http.HttpServer;
 import io.vertx.core.http.HttpServerResponse;
@@ -31,7 +32,7 @@ public class JdbcClientExample {
             client.getConnection(res -> {
                 if (res.succeeded()) {
                     SQLConnection connection = res.result();
-                    connection.query("select SLEEP(5)", res2 -> {
+                    connection.query(Sql.selectSleep, res2 -> {
                         if (res2.succeeded()) {
                             ResultSet rs = res2.result();
                             // 用结果集results进行其他操作
@@ -47,6 +48,6 @@ public class JdbcClientExample {
 
         });
 
-        server.requestHandler(router::accept).listen(8080);
+        server.requestHandler(router).listen(8080);
     }
 }
