@@ -13,15 +13,13 @@ public class HelloWorldWeb {
         Router router = Router.router(vertx);
 
         router.route().handler(routingContext -> {
-
-            // 所有的请求都会调用这个处理器处理
+            // 会发现每次请求都在同一个线程中
+            System.out.println(Thread.currentThread());
             HttpServerResponse response = routingContext.response();
             response.putHeader("content-type", "text/plain");
-
-            // 写入响应并结束处理
             response.end("Hello World from Vert.x-Web!");
         });
 
-        server.requestHandler(router::accept).listen(8080);
+        server.requestHandler(router).listen(8080);
     }
 }
