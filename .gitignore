@@ -1,0 +1,9 @@
+vertx-example/.idea/
+*.iml
+*.class
+vertx-example/target/
+rxjava2-example/.idea/
+rxjava2-example/.gradle/vcsWorkingDirs/gc.properties
+rxjava2-example/.gradle/4.6/fileHashes/fileHashes.lock
+rxjava2-example/.gradle/4.6/fileHashes/fileHashes.bin
+rxjava2-example/.gradle/4.6/fileChanges/last-build.bin
