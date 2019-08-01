@@ -1,4 +1,4 @@
-package contact;
+package observable.contact;
 
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;

@@ -1,4 +1,4 @@
-package map;
+package observable.map;
 
 import io.reactivex.Observable;
 import io.reactivex.Observer;

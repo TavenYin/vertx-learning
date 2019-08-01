@@ -1,4 +1,4 @@
-package map;
+package observable.map;
 
 import io.reactivex.Observable;
 import io.reactivex.ObservableSource;
@@ -14,7 +14,7 @@ import java.util.List;
 public class FlatMap {
     public static void main(String[] args) {
         List list = createPerson();
-//        map(list);
+//        observable.map(list);
         flatMap(list);
     }
 
