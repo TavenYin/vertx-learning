@@ -8,7 +8,7 @@ import io.reactivex.functions.Function;
 /**
  * 转换操作符
  */
-public class MapExample {
+public class Map {
     public static void main(String[] args) {
         map();
 
